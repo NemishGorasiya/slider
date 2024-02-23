@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #F4F7FF;
+}
+.main {
+  width: 80%;
+  /* background: yellow; */
+  text-align: center;
+}
+.main .heading {
+  margin: 30px 0;
+}
+.main .carousel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .carousel .slider-container {
+  flex-grow: 1;
+  overflow: hidden;
+  margin: 0 20px;
+  scroll-behavior: smooth;
+  /* background: red; */
+}
+.main .carousel .slider{  
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  /* background: yellowgreen; */
+  }
+  .main .carousel .slider .slide{
+   background: #fff;
+   min-width: 32.33%;
+   border-radius: 10px;
+   display: flex;
+   height: auto;
+   align-items: start;
+   padding: 30px !important;
+   margin: 25px 0.5% !important;
+   margin-right: 0.5% !important;
+   box-shadow: rgba(100, 100, 111, 0.2) 7px 7px 7px 0px;
+}
+.main .carousel .slider .slide:last-child{
+  position: relative;
+}
+.main .carousel .slider .slide:last-child::after{
+  /* background: green; */
+  position: absolute;
+  content: '';
+  width: 1%;
+  height: 100%;
+  z-index: 99;
+  left: 100%;
+  top: 0;
+}
+  .main .carousel .slider .slide .slide-icon{
+    min-width: 90px;
+    min-height: 90px;
+    /* background: yellow; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      background: #F4F7FF;
+   border-radius: 10px;
+}
+.main .carousel .slider .slide .slide-icon i {
+  /* height: 80%;
+  width: 80%; */
+  font-size: 30px;
+}
+.main .carousel .slider .slide .slide-text {
+  width: auto;
+  text-align: start;
+  height: auto;
+  overflow: hidden;
+}
+.main .carousel .slider .slide .slide-text h5 {
+  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.main .carousel .slider .slide .slide-text .slide-sub-text {
+  line-height: 25px;
+  display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.main .carousel .side-btn {
+  min-height: 60px;
+  min-width: 60px;
+  background: rgba(20,20,20,0.1);
+  border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+.main .carousel .side-btn i{
+  font-size: 35px;
+}
+.main .carousel .side-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.main .carousel .side-btn.disabled i{
+  pointer-events: none;
+  font-size: 15px;
+}
+.main .carousel .side-btn:hover {
+  background: rgba(20,20,20,0.3);
+}
+.main .buttons {
+  padding: 20px 0;
+}
+.main .buttons button{
+  margin: 0 10px;
+  cursor: pointer;
+}
